@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - WebApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/WebApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg" style="padding-bottom: 0px">
+            <div class="container" style="padding-top: 10px">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApp</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </li>
+                        <li class="nav-item" style="margin-right: 50px">
+                            <a class="navbar-brand" href="#home">
+                                <img src="/img/logo.png"
+                                     alt="Bootstrap"
+                                     width="100%"
+                                     height="24" />
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="">Nữ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#sanpham">Nam</a>
+                        </li>
+                        <li class="nav-item" style="margin-right: 40px">
+                            <a class="nav-link active" href="#gioithieu">Giới thiệu</a>
+                        </li>
+                        <li class="nav-item" style="margin-right: 50px">
+                            <form class="d-flex" role="search">
+                                <input class="form-control me-2"
+                                       type="search"
+                                       placeholder="Search"
+                                       aria-label="Search"
+                                       style="width: 250px" />
+                                <button class="btn btn-outline-success"
+                                        type="submit"
+                                        style="
+                  border-radius: 25px;
+                  background-color: #b22222;
+                  border-color: #b22222;
+                ">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                         width="16"
+                                         height="16"
+                                         fill="currentColor"
+                                         class="bi bi-search"
+                                         viewBox="0 0 16 16"
+                                         style="color: white">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                                    </svg>
+                                </button>
+                            </form>
+                        </li>
+                        <li class="nav-item row" style="margin-right: 5px; width: 125px">
+                            <a href="#dangnhap" style="color: black; text-decoration: none">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     width="25"
+                                     height="25"
+                                     fill="currentColor"
+                                     class="bi bi-person col-12"
+                                     viewBox="0 0 16 16">
+                                    <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z" />
+                                </svg>
+                                <p class="col-12" style="padding-left: 20px">Tài khoản</p>
+                            </a>
+                        </li>
+                        <li class="nav-item row" style="width: 125px">
+                            <a href="#giohang"
+                               style="color: black; text-decoration: none; position: relative">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     width="25"
+                                     height="25"
+                                     fill="currentColor"
+                                     class="bi bi-cart2 col-12"
+                                     viewBox="0 0 16 16">
+                                    <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l1.25 5h8.22l1.25-5H3.14zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z" />
+                                </svg>
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                                      style="left: 75% !important">
+                                    0
+                                </span>
+                                <p class="col-12" style="padding-left: 20px">Giỏ hàng</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div style="background-color: #b22222">
+        <div class="container">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <footer style="background-color: #b22222">
+        <div class="container">
+            <div class="row">
+                <div class="col-3" style="margin-top: 20px">
+                    <p style="color: white">Về TOKYOLIFE</p>
+                    <p style="color: white">
+                        TokyoLife là cửa hàng bán lẻ đồ gia dụng, hóa mỹ phẩm, phụ kiện
+                        chính hãng các thương hiệu Nhật Bản: KAI, Inomata, Ebisu, Lec, ORP
+                        Tokyo, Kose , Momotani ,Naturie, Rohto , DHC , Orihiro , Naive,
+                        Aprica, Kose (Dòng Softymo), Shiseido (Dòng Senka, Anessa), KAO,
+                        Rosette, Naive, Ebisu, Unicharm, Tsubaki , Himawari, Rocket,
+                        Gunze-Sabrina, Regart… Nước hoa TokyoLife sản xuất tại Pháp. Hóa
+                        phẩm lành tính TokyoLife sản xuất tại Nhật Bản. Phụ kiện giày,
+                        túi, ví, balo và thời trang hiệu TokyoNow, TokyoBasic, TokyoSmart,
+                        TokyoSecret, In The Now và nhiều thương hiệu thời trang, phụ kiện
+                        khác sản xuất tại Việt Nam, Trung Quốc, Thái Lan…
+                    </p>
+                </div>
+                <div class="col-3" style="margin-top: 20px">
+                    <br />
+                    <p style="color: white; margin-top: 18px">HỆ THỐNG CỬA HÀNG</p>
+                    <p style="color: white">Hotline CSKH: 024.7300.6999</p>
+                    <p style="color: white">Email CSKH: cskh@tokyolife.vn</p>
+                </div>
+                <div class="col-3" style="margin-top: 20px; margin-bottom: 20px">
+                    <p style="color: white">Hỗ trợ Khách hàng</p>
+                    <ul class="nav flex-column"
+                        style="list-style-type: disc; margin-left: 20px; color: white">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">Giới thiệu & Liên hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">Hướng dẫn mua hàng</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">HD thanh toán bằng VNPAY</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">Hướng dẫn chọn Size</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">Chính sách sinh nhật App Member</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">Chính sách tích điểm / tiêu điểm</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">Chính sách đổi trả</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">Chính sách bảo mật</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">Chính sách vận chuyển</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">Điều khoản & Dịch vụ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: white">Tuyển dụng</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-3" style="margin-top: 20px">
+                    <p style="color: white">Hỗ trợ/Tư vấn mua online</p>
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         width="30"
+                         height="30"
+                         fill="currentColor"
+                         class="bi bi-telephone"
+                         viewBox="0 0 16 16"
+                         style="float: left; color: white">
+                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg>
+                    <p style="color: white">0247 308 2882</p>
+                    <p style="color: white">contact@tokyolife.vn</p>
+                    <p style="color: white">Kết nối với TokyoLife</p>
+                    <a class="btn btn-light"
+                       style="margin-bottom: 10px"
+                       href="#qlsanpham">Quản lý sản phẩm</a>
+                    <a class="btn btn-light" href="#qlloaisanpham">Quản lý loại sản phẩm</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

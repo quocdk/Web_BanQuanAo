@@ -1,0 +1,14 @@
+D:\DuAn\WebBanQuanAo\WebData\bin\Debug\net6.0\WebData.deps.json
+D:\DuAn\WebBanQuanAo\WebData\bin\Debug\net6.0\WebData.runtimeconfig.json
+D:\DuAn\WebBanQuanAo\WebData\bin\Debug\net6.0\WebData.dll
+D:\DuAn\WebBanQuanAo\WebData\bin\Debug\net6.0\WebData.pdb
+D:\DuAn\WebBanQuanAo\WebData\obj\Debug\net6.0\WebData.csproj.AssemblyReference.cache
+D:\DuAn\WebBanQuanAo\WebData\obj\Debug\net6.0\WebData.GeneratedMSBuildEditorConfig.editorconfig
+D:\DuAn\WebBanQuanAo\WebData\obj\Debug\net6.0\WebData.AssemblyInfoInputs.cache
+D:\DuAn\WebBanQuanAo\WebData\obj\Debug\net6.0\WebData.AssemblyInfo.cs
+D:\DuAn\WebBanQuanAo\WebData\obj\Debug\net6.0\WebData.csproj.CoreCompileInputs.cache
+D:\DuAn\WebBanQuanAo\WebData\obj\Debug\net6.0\WebData.dll
+D:\DuAn\WebBanQuanAo\WebData\obj\Debug\net6.0\refint\WebData.dll
+D:\DuAn\WebBanQuanAo\WebData\obj\Debug\net6.0\WebData.pdb
+D:\DuAn\WebBanQuanAo\WebData\obj\Debug\net6.0\WebData.genruntimeconfig.cache
+D:\DuAn\WebBanQuanAo\WebData\obj\Debug\net6.0\ref\WebData.dll
