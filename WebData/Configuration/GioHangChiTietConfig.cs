@@ -14,8 +14,7 @@ namespace WebData.Configuration
     {
         public void Configure(EntityTypeBuilder<GioHangChiTiet> builder)
         {
-            builder.HasKey(x => x.IdGioHang);
-            builder.HasKey(x => x.IdSanPhamChiTiet);
+            builder.HasKey(x => x.Id);
             builder.HasOne(x=>x.GioHang).WithMany(x=>x.GioHangChiTiets).HasForeignKey(x=>x.IdGioHang);
             builder.HasOne(x=>x.SanPhamChiTiet).WithMany(x=>x.GioHangChiTiets).HasForeignKey(x=>x.IdSanPhamChiTiet);
         }

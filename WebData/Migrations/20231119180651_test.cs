@@ -228,8 +228,9 @@ namespace WebData.Migrations
                 name: "GioHangChiTiets",
                 columns: table => new
                 {
-                    IdSanPhamChiTiet = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdGioHang = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdSanPhamChiTiet = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
                     DonGia = table.Column<long>(type: "bigint", nullable: false),
                     DonGiaKhiGiam = table.Column<long>(type: "bigint", nullable: false),
@@ -237,7 +238,7 @@ namespace WebData.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_GioHangChiTiets", x => x.IdSanPhamChiTiet);
+                    table.PrimaryKey("PK_GioHangChiTiets", x => x.Id);
                     table.ForeignKey(
                         name: "FK_GioHangChiTiets_GioHangs_IdGioHang",
                         column: x => x.IdGioHang,
@@ -256,14 +257,15 @@ namespace WebData.Migrations
                 name: "HoaDonChiTiets",
                 columns: table => new
                 {
-                    IdSanPhamChiTiet = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IdHoaDon = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    IdSanPhamChiTiet = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     SoLuong = table.Column<int>(type: "int", nullable: false),
                     DonGia = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_HoaDonChiTiets", x => x.IdSanPhamChiTiet);
+                    table.PrimaryKey("PK_HoaDonChiTiets", x => x.Id);
                     table.ForeignKey(
                         name: "FK_HoaDonChiTiets_HoaDons_IdHoaDon",
                         column: x => x.IdHoaDon,
@@ -284,6 +286,11 @@ namespace WebData.Migrations
                 column: "IdGioHang");
 
             migrationBuilder.CreateIndex(
+                name: "IX_GioHangChiTiets_IdSanPhamChiTiet",
+                table: "GioHangChiTiets",
+                column: "IdSanPhamChiTiet");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_GioHangs_IdKhachHang",
                 table: "GioHangs",
                 column: "IdKhachHang");
@@ -292,6 +299,11 @@ namespace WebData.Migrations
                 name: "IX_HoaDonChiTiets_IdHoaDon",
                 table: "HoaDonChiTiets",
                 column: "IdHoaDon");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_HoaDonChiTiets_IdSanPhamChiTiet",
+                table: "HoaDonChiTiets",
+                column: "IdSanPhamChiTiet");
 
             migrationBuilder.CreateIndex(
                 name: "IX_HoaDons_IdKhachHang",

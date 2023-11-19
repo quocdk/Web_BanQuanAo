@@ -13,8 +13,7 @@ namespace WebData.Configuration
     {
         public void Configure(EntityTypeBuilder<HoaDonChiTiet> builder)
         {
-            builder.HasKey(x => x.IdHoaDon);
-            builder.HasKey(x => x.IdSanPhamChiTiet);
+            builder.HasKey(x => x.Id);
             builder.HasOne(x => x.HoaDon).WithMany(x => x.HoaDonChiTiets).HasForeignKey(x => x.IdHoaDon);
             builder.HasOne(x => x.SanPhamChiTiet).WithMany(x => x.HoaDonChiTiets).HasForeignKey(x => x.IdSanPhamChiTiet);
         }

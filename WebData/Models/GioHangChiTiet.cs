@@ -8,6 +8,7 @@ namespace WebData.Models
 {
     public class GioHangChiTiet
     {
+        public Guid Id { get; set; }
         public Guid IdGioHang { get; set; }
         public Guid IdSanPhamChiTiet { get; set; }
         public int SoLuong { get; set; }

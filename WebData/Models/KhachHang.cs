@@ -17,7 +17,6 @@ namespace WebData.Models
         public string SoDienThoai { get; set; }
         public string Email { get; set; }
         public string MatKhau { get; set; }
-        public Guid IdChucVu { get; set; }
         public virtual ICollection<GioHang> GioHangs { get; set; }
         public virtual ICollection<HoaDon> HoaDons { get; set; }
     }

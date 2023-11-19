@@ -58,7 +58,8 @@ namespace WebData.Migrations
 
             modelBuilder.Entity("WebData.Models.GioHangChiTiet", b =>
                 {
-                    b.Property<Guid>("IdSanPhamChiTiet")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<long>("DonGia")
@@ -70,6 +71,9 @@ namespace WebData.Migrations
                     b.Property<Guid>("IdGioHang")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("IdSanPhamChiTiet")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("ImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -77,9 +81,11 @@ namespace WebData.Migrations
                     b.Property<int>("SoLuong")
                         .HasColumnType("int");
 
-                    b.HasKey("IdSanPhamChiTiet");
+                    b.HasKey("Id");
 
                     b.HasIndex("IdGioHang");
+
+                    b.HasIndex("IdSanPhamChiTiet");
 
                     b.ToTable("GioHangChiTiets");
                 });
@@ -119,7 +125,8 @@ namespace WebData.Migrations
 
             modelBuilder.Entity("WebData.Models.HoaDonChiTiet", b =>
                 {
-                    b.Property<Guid>("IdSanPhamChiTiet")
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<long>("DonGia")
@@ -128,12 +135,17 @@ namespace WebData.Migrations
                     b.Property<Guid>("IdHoaDon")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("IdSanPhamChiTiet")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("SoLuong")
                         .HasColumnType("int");
 
-                    b.HasKey("IdSanPhamChiTiet");
+                    b.HasKey("Id");
 
                     b.HasIndex("IdHoaDon");
+
+                    b.HasIndex("IdSanPhamChiTiet");
 
                     b.ToTable("HoaDonChiTiets");
                 });
