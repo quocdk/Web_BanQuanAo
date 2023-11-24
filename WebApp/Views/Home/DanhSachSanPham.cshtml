@@ -1,0 +1,138 @@
+﻿<div style="background-color: #f1eded; padding: 20px 0px">
+    <div class="container">
+        <div class="row">
+            <div class="col-2"
+                 style="
+          background-color: #f1eded;
+          margin: 10px 0px;
+          padding: 0px 20px 0px 0px;
+        ">
+                <div style="background-color: white; padding: 10px 0px 10px 10px">
+                    <h5>
+                        <svg xmlns="http://www.w3.org/2000/svg"
+                             width="16"
+                             height="16"
+                             fill="currentColor"
+                             class="bi bi-funnel"
+                             viewBox="0 0 16 16">
+                            <path d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z" />
+                        </svg>
+                        <strong>BỘ LỌC</strong>
+                    </h5>
+                    <h6>Loại sản phẩm</h6>
+                    <ul style="list-style-type: none">
+                        <li>
+                            <a href="#{{loaiSanPham.loai}}"
+                               style="color: black; text-decoration: none">Áo</a>
+                        </li>
+                        <li>
+                            <a href="#{{loaiSanPham.loai}}"
+                               style="color: black; text-decoration: none">Quần</a>
+                        </li>
+                    </ul>
+                    <h6>Khoảng giá</h6>
+                    <h6>Size</h6>
+                </div>
+            </div>
+            <div class="col-10" style="margin-top: 10px">
+                <div style="
+            background-color: white;
+            height: 50px;
+            padding: 10px 0px 0px 10px;
+          ">
+                    <h5><strong>Sản phẩm</strong></h5>
+                </div>
+                <div class="row">
+                    <div class="col-3"
+                         style="background-color: #f1eded; padding: 10px"
+                        <div style="
+                background-color: white;
+                padding: 5px 5px 0px 5px;
+                height: 480px;
+              ">
+                            <a asp-area="" asp-controller="Home" asp-action="SanPhamDetai">
+                                <img src="{{sanPham.img}}" alt="" width="100%" height="350px" />
+                            </a>
+                            <div style="padding: 10px 5px">
+                                <p style="margin-bottom: 5px">{{sanPham.thuongHieu}}</p>
+                                <a asp-area="" asp-controller="Home" asp-action="SanPhamDetai"
+                                   style="color: black; text-decoration: none">
+                                    <div style="height: 50px">
+                                        <strong>{{sanPham.ten}}</strong>
+                                    </div>
+                                </a>
+                                <p style="margin-bottom: 5px">{{sanPham.gia}}₫</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3"
+                         style="background-color: #f1eded; padding: 10px"
+                        <div style="
+                background-color: white;
+                padding: 5px 5px 0px 5px;
+                height: 480px;
+              ">
+                            <a asp-area="" asp-controller="Home" asp-action="SanPhamDetai">
+                                <img src="{{sanPham.img}}" alt="" width="100%" height="350px" />
+                            </a>
+                            <div style="padding: 10px 5px">
+                                <p style="margin-bottom: 5px">{{sanPham.thuongHieu}}</p>
+                                <a asp-area="" asp-controller="Home" asp-action="SanPhamDetai"
+                                   style="color: black; text-decoration: none">
+                                    <div style="height: 50px">
+                                        <strong>{{sanPham.ten}}</strong>
+                                    </div>
+                                </a>
+                                <p style="margin-bottom: 5px">{{sanPham.gia}}₫</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3"
+                         style="background-color: #f1eded; padding: 10px"
+                        <div style="
+                background-color: white;
+                padding: 5px 5px 0px 5px;
+                height: 480px;
+              ">
+                            <a asp-area="" asp-controller="Home" asp-action="SanPhamDetai">
+                                <img src="{{sanPham.img}}" alt="" width="100%" height="350px" />
+                            </a>
+                            <div style="padding: 10px 5px">
+                                <p style="margin-bottom: 5px">{{sanPham.thuongHieu}}</p>
+                                <a asp-area="" asp-controller="Home" asp-action="SanPhamDetai"
+                                   style="color: black; text-decoration: none">
+                                    <div style="height: 50px">
+                                        <strong>{{sanPham.ten}}</strong>
+                                    </div>
+                                </a>
+                                <p style="margin-bottom: 5px">{{sanPham.gia}}₫</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3"
+                         style="background-color: #f1eded; padding: 10px"
+                        <div style="
+                background-color: white;
+                padding: 5px 5px 0px 5px;
+                height: 480px;
+              ">
+                            <a asp-area="" asp-controller="Home" asp-action="SanPhamDetai">
+                                <img src="{{sanPham.img}}" alt="" width="100%" height="350px" />
+                            </a>
+                            <div style="padding: 10px 5px">
+                                <p style="margin-bottom: 5px">{{sanPham.thuongHieu}}</p>
+                                <a asp-area="" asp-controller="Home" asp-action="SanPhamDetai"
+                                   style="color: black; text-decoration: none">
+                                    <div style="height: 50px">
+                                        <strong>{{sanPham.ten}}</strong>
+                                    </div>
+                                </a>
+                                <p style="margin-bottom: 5px">{{sanPham.gia}}₫</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

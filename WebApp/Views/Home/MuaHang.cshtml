@@ -1,0 +1,167 @@
+﻿<div style="background-color: #f1eded; padding: 20px 0px">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <div style="background-color: white; padding: 20px">
+                    <form>
+                        <h4>Thông tin giao hàng</h4>
+                        <p>
+                            Bạn đã có tài khoản?
+                            <a href="#dangnhap" style="color: black; text-decoration: none"><strong>Đăng nhập</strong></a>
+                        </p>
+                        <div>
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Họ và tên"
+                                   ng-model="email"
+                                   style="margin-bottom: 20px" />
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Email"
+                                       style="margin-bottom: 20px" />
+                            </div>
+                            <div class="col-4">
+                                <input type="text"
+                                       class="form-control"
+                                       placeholder="Số điện thoại" />
+                            </div>
+                        </div>
+                        <div>
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Địa chỉ"
+                                   ng-model="email"
+                                   style="margin-bottom: 20px" />
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Tỉnh / thành phố</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Quận / huyện</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                            <div class="col-4">
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>Phường / xã</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br />
+                        <p>Phương thức vận chuyển</p>
+                        <div style="
+                background-color: #f1eded;
+                height: 40px;
+                padding: 10px;
+                border-radius: 5px 5px 0px 0px;
+              ">
+                            <input type="radio" name="1" style="margin-right: 20px" /><label for="">
+                                <span style="float: left; margin-right: 10px">
+                                    Giao hàng tiết kiệm
+                                </span>
+                                <span style="text-align: right"> 30,000₫</span>
+                            </label>
+                        </div>
+                        <div style="
+                background-color: #f1eded;
+                height: 40px;
+                padding: 10px;
+                border-radius: 0px 0px 5px 5px;
+              ">
+                            <input type="radio" name="1" style="margin-right: 20px" /><label for="">
+                                <span style="float: left; margin-right: 18px">
+                                    Giao hàng hỏa tốc
+                                </span>
+                                <span style="text-align: right"> 45,000₫</span>
+                            </label>
+                        </div>
+
+                        <p style="margin-top: 20px">Phương thức thanh toán</p>
+                        <div style="
+                background-color: #f1eded;
+                height: 40px;
+                padding: 10px;
+                border-radius: 5px;
+              ">
+                            <input type="radio" style="margin-right: 20px" /><label for="">
+                                <span style="float: left">Thanh toán khi giao hàng (COD)</span>
+                            </label>
+                        </div>
+                        <hr />
+                        <p style="float: left; margin-top: 10px">
+                            <a href="#giohang" style="color: black; text-decoration: none"><strong>Giỏ hàng</strong></a>
+                        </p>
+                        <p style="text-align: right">
+                            <button type="button"
+                                    class="btn btn-primary"
+                                    style="background-color: blue; border-color: blue; height: 50px">
+                                Hoàn tất đơn hàng
+                            </button>
+                        </p>
+                    </form>
+                </div>
+            </div>
+            <div class="col-6">
+                <div style="background-color: white; padding: 10px">
+                    <div class="row">
+                        <div class="col-2">
+                            <img src="{{sanPham.img}}" alt="" width="100%" />
+                        </div>
+                        <div class="col-8">
+                            <p>{{sanPham.ten}}</p>
+                            <p>Xanh đậm / S</p>
+                        </div>
+                        <div class="col-2">
+                            <p>{{sanPham.gia}}</p>
+                        </div>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-8">
+                        <input type="text"
+                               class="form-control"
+                               id="inputPassword2"
+                               placeholder="Mã giảm giá"
+                               style="width: 100%" />
+                    </div>
+                    <div class="col-4">
+                        <button type="submit" class="btn btn-secondary" style="width: 100%">
+                            Sử dụng
+                        </button>
+                    </div>
+                </div>
+                <a href="">Xem thêm mã giảm giá</a>
+                <hr />
+                <div>
+                    <p style="float: left">Tạm tính</p>
+                    <p style="text-align: right">149,000₫</p>
+                    <p style="float: left">Phí vận chuyển</p>
+                    <p style="text-align: right">30,000₫</p>
+                </div>
+                <hr />
+                <div>
+                    <p style="float: left">Tổng cộng</p>
+                    <p style="text-align: right">
+                        <small>VND</small> <strong>179,000₫</strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

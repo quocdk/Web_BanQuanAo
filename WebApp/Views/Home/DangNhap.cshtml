@@ -1,0 +1,54 @@
+﻿<div style="background-color: rgb(241, 237, 237)">
+    <div class="container">
+        <br />
+        <div id="dangnhap1"
+             style="
+        width: 500px;
+        background-color: white;
+        margin-left: 400px;
+        text-align: center;
+        padding: 30px 50px;
+      ">
+            <h4>ĐĂNG NHẬP TÀI KHOẢN</h4>
+            <p>Nhập email và mật khẩu của bạn</p>
+            <hr />
+            <form method="post">
+                <div>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Email"
+                           ng-model="email"
+                           style="margin-bottom: 20px" />
+                </div>
+                <div>
+                    <input type="text"
+                           class="form-control"
+                           placeholder="Mật khẩu"
+                           ng-model="matKhau"
+                           style="margin-bottom: 30px" />
+                </div>
+            </form>
+            <div class="d-grid gap-2">
+                <button class="btn btn-primary"
+                        type="button"
+                        style="
+            background-color: black;
+            border-color: black;
+            margin-bottom: 30px;
+          "
+                        ng-click="dangnhap()">
+                    Đăng nhập
+                </button>
+            </div>
+            <p style="text-align: left">
+                Khách hàng mới?
+                <a asp-area="" asp-controller="Home" asp-action="DangKy" style="color: black; text-decoration: none"><strong>Tạo tài khoản</strong></a>
+            </p>
+            <p style="text-align: left">
+                Đổi mật khẩu?
+                <a asp-area="" asp-controller="Home" asp-action="DoiMatKhau" style="color: black; text-decoration: none"><strong>Thay đổi mật khẩu</strong></a>
+            </p>
+        </div>
+        <br />
+    </div>
+</div>

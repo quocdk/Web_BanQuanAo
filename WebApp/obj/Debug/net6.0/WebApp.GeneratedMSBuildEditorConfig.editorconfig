@@ -16,12 +16,52 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\DuAn\Web_BanQuanAo\WebApp
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/DuAn/Web_BanQuanAo/WebApp/Views/Home/DangKy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYW5nS3kuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAn/Web_BanQuanAo/WebApp/Views/Home/DangNhap.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYW5nTmhhcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAn/Web_BanQuanAo/WebApp/Views/Home/DanhSachSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEYW5oU2FjaFNhblBoYW0uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAn/Web_BanQuanAo/WebApp/Views/Home/DoiMatKhau.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxEb2lNYXRLaGF1LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAn/Web_BanQuanAo/WebApp/Views/Home/GioHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHaW9IYW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAn/Web_BanQuanAo/WebApp/Views/Home/GioiThieu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxHaW9pVGhpZXUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DuAn/Web_BanQuanAo/WebApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DuAn/Web_BanQuanAo/WebApp/Views/Home/MuaHang.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNdWFIYW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DuAn/Web_BanQuanAo/WebApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAn/Web_BanQuanAo/WebApp/Views/Home/QuanLyLoaiSanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRdWFuTHlMb2FpU2FuUGhhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAn/Web_BanQuanAo/WebApp/Views/Home/QuanLySanPham.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxRdWFuTHlTYW5QaGFtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DuAn/Web_BanQuanAo/WebApp/Views/Home/SanPhamDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTYW5QaGFtRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DuAn/Web_BanQuanAo/WebApp/Views/Shared/Error.cshtml]

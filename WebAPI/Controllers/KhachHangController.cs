@@ -116,5 +116,48 @@ namespace WebAPI.Controllers
                 throw;
             }
         }
+
+        [HttpGet("dang-nhap")]
+        public string DangNhap(string SoDienThoai, string MatKhau)
+        {
+            var taiKhoan = context.KhachHangs.FirstOrDefault(x=>x.SoDienThoai==SoDienThoai);
+            if (taiKhoan != null)
+            {
+                if (taiKhoan.MatKhau == MatKhau)
+                {
+                    var sdt = taiKhoan.SoDienThoai;
+                    return sdt;
+                }
+                else return "Mật khẩu không đúng";
+            }
+            else return "Số điện thoại không tồn tại";
+        }
+        [HttpPost("dang-ky")]
+        public bool DangKy(string Ten, string Ho, int GioiTinh, DateTime NgaySinh, string DiaChi, string SoDienThoai, string Email, string MatKhau)
+        {
+            Guid id = Guid.NewGuid();
+            KhachHang KhachHang = new KhachHang
+            {
+                Id = id,
+                Ten = Ten,
+                Ho = Ho,
+                GioiTinh = GioiTinh,
+                NgaySinh = NgaySinh,
+                DiaChi = DiaChi,
+                SoDienThoai = SoDienThoai,
+                Email = Email,
+                MatKhau = MatKhau,
+            };
+            try
+            {
+                context.KhachHangs.Add(KhachHang);
+                context.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
 }

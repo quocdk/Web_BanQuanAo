@@ -1,0 +1,169 @@
+﻿<div style="background-color: #f1eded; padding: 20px 0px">
+    <div class="container">
+        <h1 style="text-align: center">Quản lý sản phẩm</h1>
+        <form class="container" method="post">
+            <div class="form-group">
+                <label for="exampleInputPassword1">ID</label>
+                <input type="text" class="form-control" ng-model="id" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Tên sản phẩm</label>
+                <input type="text" class="form-control" ng-model="ten" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Mã sản phẩm</label>
+                <input type="text" class="form-control" ng-model="maSanPham" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Thương hiệu</label>
+                <input type="text" class="form-control" ng-model="thuongHieu" />
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Số lượng tồn</label>
+                <input type="text" class="form-control" ng-model="slton" />
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputPassword1">Loại sản phẩm</label>
+                <select class="form-select form-select-sm"
+                        aria-label=".form-select-sm example"
+                        ng-model="loai"
+                        style="height: 37px">
+                    <option selected>Chọn loại sản phẩm</option>
+                    <option ng-repeat="loaiSanPham in listLoaiSanPham"
+                            value="{{loaiSanPham.loai}}"
+                            ng-model="loai">
+                        {{loaiSanPham.loai}}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Giá</label>
+                <input type="text" class="form-control" ng-model="gia" />
+            </div>
+            <div class="form-group" ng-model="mauSac">
+                <label for="exampleInputPassword1">Màu sắc</label>
+                <br />
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           id="inlineCheckbox1"
+                           value="Đen" />
+                    <label class="form-check-label" for="inlineCheckbox1">Đen</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           id="inlineCheckbox2"
+                           value="Xanh" />
+                    <label class="form-check-label" for="inlineCheckbox2">Xanh</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           id="inlineCheckbox3"
+                           value="Trắng" />
+                    <label class="form-check-label" for="inlineCheckbox2">Trắng</label>
+                </div>
+            </div>
+            <div class="form-group" ng-model="size">
+                <label for="exampleInputPassword1">Size</label>
+                <br />
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           id="inlineCheckbox1"
+                           value="S"
+                           ng-model="size" />
+                    <label class="form-check-label" for="inlineCheckbox1">S</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           id="inlineCheckbox2"
+                           value="M"
+                           ng-model="size" />
+                    <label class="form-check-label" for="inlineCheckbox2">M</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           id="inlineCheckbox3"
+                           value="L"
+                           ng-model="size" />
+                    <label class="form-check-label" for="inlineCheckbox3">L</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           id="inlineCheckbox4"
+                           value="XL"
+                           ng-model="size" />
+                    <label class="form-check-label" for="inlineCheckbox4">XL</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           id="inlineCheckbox5"
+                           value="XXL"
+                           ng-model="size" />
+                    <label class="form-check-label" for="inlineCheckbox5">XXL</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input"
+                           type="checkbox"
+                           id="inlineCheckbox6"
+                           value="XXXL"
+                           ng-model="size" />
+                    <label class="form-check-label" for="inlineCheckbox6">XXXL</label>
+                </div>
+            </div>
+            <div class="form-group" style="margin-bottom: 10px">
+                <label for="exampleInputPassword1">Link Ảnh</label>
+                <input type="text" class="form-control" ng-model="img" />
+            </div>
+            <button type="submit" class="btn btn-danger" ng-click="them()">
+                Them
+            </button>
+            <button type="submit" class="btn btn-danger" ng-click="update()">
+                Update
+            </button>
+        </form>
+
+        <table class="table container">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Tên sản phẩm</td>
+                    <td>Mã sản phẩm</td>
+                    <td>Thương hiệu</td>
+                    <td>Số lượng tồn</td>
+                    <td>Loại</td>
+                    <td>Giá</td>
+
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="sanPham in listSanPham">
+                    <td>{{sanPham.id}}</td>
+                    <td>{{sanPham.ten}}</td>
+                    <td>{{sanPham.maSanPham}}</td>
+                    <td>{{sanPham.thuongHieu}}</td>
+                    <td>{{sanPham.soLuongTon}}</td>
+                    <td>{{sanPham.loai}}</td>
+                    <td>{{sanPham.gia}}₫</td>
+                    <td>
+                        <!-- <a class="btn btn-primary" href="#detail/{{sanPham.id}}">DETAIL</a> -->
+                        <button class="btn btn-danger" ng-click="detail(sanPham.id)">
+                            Detail
+                        </button>
+                        <button class="btn btn-danger" ng-click="delete(sanPham.id)">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

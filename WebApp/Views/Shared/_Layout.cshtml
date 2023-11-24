@@ -12,21 +12,10 @@
     <header>
         <nav class="navbar navbar-expand-lg" style="padding-bottom: 0px">
             <div class="container" style="padding-top: 10px">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">WebApp</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
                         <li class="nav-item" style="margin-right: 50px">
-                            <a class="navbar-brand" href="#home">
+                            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
                                 <img src="/img/logo.png"
                                      alt="Bootstrap"
                                      width="100%"
@@ -37,10 +26,10 @@
                             <a class="nav-link active" href="">Nữ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#sanpham">Nam</a>
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="DanhSachSanPham">Nam</a>
                         </li>
                         <li class="nav-item" style="margin-right: 40px">
-                            <a class="nav-link active" href="#gioithieu">Giới thiệu</a>
+                            <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="GioiThieu">Giới thiệu</a>
                         </li>
                         <li class="nav-item" style="margin-right: 50px">
                             <form class="d-flex" role="search">
@@ -69,7 +58,7 @@
                             </form>
                         </li>
                         <li class="nav-item row" style="margin-right: 5px; width: 125px">
-                            <a href="#dangnhap" style="color: black; text-decoration: none">
+                            <a asp-area="" asp-controller="Home" asp-action="DangNhap" style="color: black; text-decoration: none">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      width="25"
                                      height="25"
@@ -82,7 +71,7 @@
                             </a>
                         </li>
                         <li class="nav-item row" style="width: 125px">
-                            <a href="#giohang"
+                            <a asp-area="" asp-controller="Home" asp-action="GioHang"
                                style="color: black; text-decoration: none; position: relative">
                                 <svg xmlns="http://www.w3.org/2000/svg"
                                      width="25"
@@ -190,8 +179,8 @@
                     <p style="color: white">Kết nối với TokyoLife</p>
                     <a class="btn btn-light"
                        style="margin-bottom: 10px"
-                       href="#qlsanpham">Quản lý sản phẩm</a>
-                    <a class="btn btn-light" href="#qlloaisanpham">Quản lý loại sản phẩm</a>
+                       asp-area="" asp-controller="Home" asp-action="QuanLySanPham">Quản lý sản phẩm</a>
+                    <a class="btn btn-light" asp-area="" asp-controller="Home" asp-action="QuanLyLoaiSanPham">Quản lý loại sản phẩm</a>
                 </div>
             </div>
         </div>

@@ -1,0 +1,202 @@
+﻿<div style="background-color: #f1eded; padding: 20px 0px">
+    <div class="container">
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-5">
+                <img src="{{sanPham.img}}" alt="" />
+            </div>
+            <div class="col-6"
+                 style="background-color: white; padding: 20px; height: fit-content">
+                <h3>{{sanPham.ten}}</h3>
+                <p style="float: left">Mã sản phẩm: {{sanPham.maSanPham}} |</p>
+                <p>| Thương hiệu: {{sanPham.thuongHieu}}</p>
+                <p>
+                    <strong>Giá:</strong>
+                    <span style="color: red; font-weight: bold; font-size: 25px">{{sanPham.gia}}đ</span>
+                    <!-- <del>450,000₫</del>
+                    <span style="background-color: red; color: white; padding: 1px 5px"
+                      >-10%</span
+                    > -->
+                </p>
+                <hr />
+                <p>
+                    Màu sắc:
+                    <input type="radio"
+                           class="btn-check"
+                           name="mausac"
+                           id="option1"
+                           autocomplete="off" />
+                    <label class="btn btn-outline-secondary" for="option1">Đen</label>
+                    <input type="radio"
+                           class="btn-check"
+                           name="mausac"
+                           id="option2"
+                           autocomplete="off" />
+                    <label class="btn btn-outline-secondary" for="option2">Xanh</label>
+                    <input type="radio"
+                           class="btn-check"
+                           name="mausac"
+                           id="option3"
+                           autocomplete="off" />
+                    <label class="btn btn-outline-secondary" for="option3">Trắng</label>
+                </p>
+                <p>
+                    Kích thước:
+                    <input type="radio"
+                           class="btn-check"
+                           name="kichthuoc"
+                           id="option1"
+                           autocomplete="off" />
+                    <label class="btn btn-outline-secondary" for="option1">S</label>
+                    <input type="radio"
+                           class="btn-check"
+                           name="kichthuoc"
+                           id="option2"
+                           autocomplete="off" />
+                    <label class="btn btn-outline-secondary" for="option2">M</label>
+                    <input type="radio"
+                           class="btn-check"
+                           name="kichthuoc"
+                           id="option3"
+                           autocomplete="off" />
+                    <label class="btn btn-outline-secondary" for="option3">L</label>
+                    <input type="radio"
+                           class="btn-check"
+                           name="kichthuoc"
+                           id="option3"
+                           autocomplete="off" />
+                    <label class="btn btn-outline-secondary" for="option3">XL</label>
+                    <input type="radio"
+                           class="btn-check"
+                           name="kichthuoc"
+                           id="option3"
+                           autocomplete="off" />
+                    <label class="btn btn-outline-secondary" for="option3">XXL</label>
+                    <input type="radio"
+                           class="btn-check"
+                           name="kichthuoc"
+                           id="option3"
+                           autocomplete="off" />
+                    <label class="btn btn-outline-secondary" for="option3">XXXL</label>
+                    <a href="">Hướng dẫn chọn size</a>
+                </p>
+                <p>
+                    Số lượng:
+                    <input type="number"
+                           max="10"
+                           min="1"
+                           name=""
+                           value="1"
+                           style="
+              width: 60px;
+              height: 40px;
+              border-radius: 7px;
+              border: 1px solid;
+              padding-left: 15px;
+            " />
+                </p>
+                <!-- <div class="buttons_added">
+                  <input class="minus is-form" type="button" value="-" />
+                  <input  name="" type="number" value="1" />
+                  <input class="plus is-form" type="button" value="+" />
+                </div> -->
+
+                <div class="row">
+                    <div class="col-6" style="padding: 0px 5px 0px 10px">
+                        <button type="button"
+                                class="btn btn-primary"
+                                style="
+                background-color: black;
+                border-color: black;
+                width: 100%;
+                height: 50px;
+              ">
+                            THÊM VÀO GIỎ
+                        </button>
+                    </div>
+                    <div class="col-6" style="padding: 0px 10px 0px 5px">
+                        <a asp-area="" asp-controller="Home" asp-action="MuaHang"
+                           class="btn btn-primary"
+                           style="
+                background-color: red;
+                border-color: red;
+                width: 100%;
+                height: 50px;
+                padding-top: 10px;
+              ">
+                            MUA NGAY
+                        </a>
+                    </div>
+                </div>
+                <br />
+                <div>
+                    <ul>
+                        <li>
+                            Tặng ngay kem chống nắng Hoa Anh Đào trị giá 350K với mỗi đơn hàng
+                            SUNSTOP nguyên giá từ 499K.
+                        </li>
+                        <li>
+                            Nhập mã KHM30K ưu đãi thêm 10% (tối đa 30K) cho đơn hàng từ 150K.
+                        </li>
+                        <li>Mua 1 tặng 1 hàng ngàn sản phẩm thời trang, phụ kiện.</li>
+                        <li>Mua 2 tặng 1 toàn bộ đồ phụ kiện TokyoLife</li>
+                    </ul>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-6" style="padding: 0px 5px 0px 10px">
+                        <div style="
+                background-color: #f1eded;
+                border-style: dashed;
+                padding: 10px 5px 0px 5px;
+              ">
+                            <p style="text-align: center">
+                                Bảo hành 1 đổi 1 trong vòng 7 ngày (*) áp dụng có điều kiện
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-6" style="padding: 0px 10px 0px 5px">
+                        <div style="
+                background-color: #f1eded;
+                border-style: dashed;
+                padding: 10px 5px 0px 5px;
+              ">
+                            <p style="text-align: center">
+                                Miễn phí vận chuyển cho đơn hàng từ 500,000 đồng
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12" style="padding: 10px 0px 0px 0px">
+                <div style="background-color: white; padding: 10px">
+                    <p><strong>THÔNG TIN SẢN PHẨM</strong></p>
+                    <p>ĐẶC ĐIỂM NỔI BẬT:</p>
+                    <ul>
+                        <li>
+                            Được dệt từ vải 100% cotton sợi dài nhẹ, mềm, mịn, mát hơn những
+                            loại vải được làm từ sợi bông thông thường khác.
+                        </li>
+                        <li>
+                            Co giãn 4 chiều giúp áo mềm và tăng độ đàn hồi. Đồng thời mang lại
+                            độ thông thoáng lớn tạo cảm giác mát mẻ cho người mặc.
+                        </li>
+                        <li>Chất liệu vải thân thiện môi trường, an toàn cho da.</li>
+                        <li>Đa dạng màu sắc, phù hợp nhiều tone màu da, đa phong cách.</li>
+                        <li>
+                            Dễ kết hợp với quần âu, quần jean, quần short ngắn, váy ngắn,...
+                            phù hợp đa phong cách, ứng dụng cao.
+                        </li>
+                    </ul>
+
+                    <p>CHẤT LIỆU: 100% Cotton (Cotton sợi dài)</p>
+                    <p>HƯỚNG DẪN SỬ DỤNG & BẢO QUẢN:</p>
+                    <p>
+                        Nên giặt tay hoặc giặt máy với nước lạnh, tránh phơi dưới trời nắng
+                        gắt.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

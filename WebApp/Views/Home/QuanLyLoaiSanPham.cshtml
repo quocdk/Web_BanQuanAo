@@ -1,0 +1,45 @@
+﻿<div style="background-color: #f1eded; padding: 20px 0px">
+    <div class="container">
+        <h1 style="text-align: center">Quản lý loại sản phẩm</h1>
+        <form class="container" method="post">
+            <div class="form-group">
+                <label for="exampleInputPassword1">ID</label>
+                <input type="text" class="form-control" ng-model="id" />
+            </div>
+            <div class="form-group" style="margin-bottom: 10px">
+                <label for="exampleInputPassword1">Loại sản phẩm</label>
+                <input type="text" class="form-control" ng-model="loai" />
+            </div>
+            <button type="submit" class="btn btn-danger" ng-click="them()">
+                Them
+            </button>
+            <button type="submit" class="btn btn-danger" ng-click="update()">
+                Update
+            </button>
+        </form>
+        <table class="table container">
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Loại sản phẩm</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="loaiSanPham in listLoaiSanPham">
+                    <td>{{loaiSanPham.id}}</td>
+                    <td>{{loaiSanPham.loai}}</td>
+                    <td>
+                        <!-- <a class="btn btn-primary" href="#detail/{{sanPham.id}}">DETAIL</a> -->
+                        <button class="btn btn-danger" ng-click="detail(loaiSanPham.id)">
+                            Detail
+                        </button>
+                        <button class="btn btn-danger" ng-click="delete(loaiSanPham.id)">
+                            Delete
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
